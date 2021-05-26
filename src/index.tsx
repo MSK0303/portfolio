@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Top from './Components/Top/Top';
 import reportWebVitals from './reportWebVitals';
 import RouteManager from './Components/RouteManager/RouteManager';
 
