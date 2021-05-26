@@ -1,0 +1,9 @@
+.nav-bar {
+    text-align: right;
+
+    & .nav-link {
+        font-size: 30px;
+        text-decoration: none;
+        margin-right: 80px;
+    }
+}

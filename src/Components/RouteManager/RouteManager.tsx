@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
-import Top  from '../Top/Top';
+import Home  from '../Home/Home';
 import About from '../About/About';
 import Create from '../Create/Create';
 import Contact from '../Contact/Contact';
@@ -12,7 +12,7 @@ const RouteManager:React.FC = () => {
         <Router>
             <div>
                 <NavBar /><hr/>
-                <Route exact path='/' component={Top}/>
+                <Route exact path='/' component={Home} />
                 <Route  path='/About' component={About}/>
                 <Route  path='/Create' component={Create}/>
                 <Route  path='/Blog' component={Blog}/>
