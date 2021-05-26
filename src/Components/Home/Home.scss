@@ -1,0 +1,23 @@
+.home-page {
+    width: 100%;
+    height: 90vh; //画面いっぱいにするには100vhとするらしい、今はfooterがあるので
+
+    & .top {
+        width: 100%;
+        height: 60%; //親要素が高さを持っているので、%指定ができる
+        background-image: url("../../assets/images/top-img.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        & .top-label {
+            width: 100%;
+            font-size: 70px;
+            color: #2EFFAC;
+            margin: auto auto;
+            padding-top: 10%;
+            text-align: center;
+        }
+
+    }
+}
