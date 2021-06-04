@@ -22,12 +22,14 @@
     }
 
     & .top-message {
+        margin-left: -180px;
         margin-top: -30px;
         text-align: center;
         font-size: 60px;
         
 
         & .role {
+            margin-left: 20px;
             font-weight: bold;
         }
     }
