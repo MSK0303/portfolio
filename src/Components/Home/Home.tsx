@@ -8,25 +8,6 @@ import {useTransition,animated,config} from 'react-spring';
 const Top:React.FC = () => {
     const message_table = ["Engineer","Blogger","Soccer Coach"];
     const [index, setIndex] = useState(0);
-    const message = message_table[index];
-
-    // const message_conmps = [
-    //     ({style}) => (
-    //         <animated.div style={{color:"red",...style}}>
-    //             Engineer
-    //         </animated.div>
-    //     ),
-    //     ({style}) => (
-    //         <animated.div style={{color:"green",...style}}>
-    //             Blogger
-    //         </animated.div>
-    //     ),
-    //     ({style}) => (
-    //         <animated.div style={{color:"blue",...style}}>
-    //             Soccer Coach
-    //         </animated.div>
-    //     )
-    // ];
 
     const transitions = useTransition(index,{
         from: {opacity:0},
@@ -36,14 +17,6 @@ const Top:React.FC = () => {
         config: config.molasses,
         onRest: () => setIndex((index+1)%message_table.length),
     });
-
-    // //timer処理
-    // setTimeout( () => {
-    //     let new_index = index+1;
-    //     if(new_index >= message_table.length) new_index = 0;
-    //     setIndex(new_index);
-    //     console.log("change");
-    // },5000);
 
     return (
         <div className="home-page">
