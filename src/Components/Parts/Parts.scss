@@ -26,11 +26,13 @@
 
 .my-icon {
     text-align: center;
-    transform: translateY(-100px);
-    animation: animyicon 1s ease-in-out 1 forwards  ;
+    //transform: translateY(-100px);
+    //transform: scale(1.02, 1.0) translate(0, -92px);
+    //animation: animyicon 1s ease-in-out 1 forwards  ;
     & img {
         border-radius: 50%;
         width: 200px;
         height: 200px;
+        animation: animyicon 1s ease-in-out 1 forwards  ;
     }
 }
