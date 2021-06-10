@@ -8,9 +8,9 @@ const Footer = () => {
     return (
         <div className="footer">
             <p className="footer-item">@2021-2022 MSK's Portfolio Site</p>
-            <GitHubIcon className="footer-item icon" />
-            <TwitterIcon className="footer-item icon" />
-            <LanguageIcon className="footer-item icon" />
+            <GitHubIcon className="footer-item icon" onClick={()=>{window.open("https://github.com/MSK0303")}}/>
+            <TwitterIcon className="footer-item icon" onClick={()=>{window.open("https://twitter.com/MSKmap")}}/>
+            <LanguageIcon className="footer-item icon" onClick={()=>{window.open("https://www.mochinoki-labo.com/")}}/>
         </div>
     )
 }
