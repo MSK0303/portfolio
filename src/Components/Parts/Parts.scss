@@ -1,13 +1,12 @@
 //レスポンシブ対応
 //ブレイクポイント
-$mb: 767px;
+$mb: 959px;
 //@mediaのフォーマット
 @mixin mobile {
     @media screen and (max-width: $mb) {
         @content;
     }
 }
-
 
 /*MyIcon*/
 @keyframes animyicon {

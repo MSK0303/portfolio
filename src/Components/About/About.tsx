@@ -21,17 +21,17 @@ const About = () => {
         <div className="about-page">
             <p className="about-top">About</p>
             <Grid container>
-                <Grid container item xs={1} spacing={2} >
+                <Grid container item sm={1} xs={1}  spacing={2} >
                 </Grid>
-                <Grid container item xs={2} spacing={2} className="grid-left">
+                <Grid container item sm={2} xs={8} spacing={2} className="grid-left">
                     <div className="about-icon">
                         <MyIcon />
                     </div>
                 </Grid>
-                <Grid container item xs={1} spacing={2} >
+                <Grid container item sm={1} xs={1} spacing={2} >
 
                 </Grid>
-                <Grid container item xs={8} spacing={2} className="grid-right">
+                <Grid container item sm={8} xs={12} spacing={2} className="grid-right">
                     <ul className="about-ul">
                         {
                             message_table.map((item,id) => (
