@@ -15,7 +15,7 @@ const RouteManager:React.FC = () => {
                 <Route  exact path='/portfolio/' component={Home} />
                 <Route  path='/portfolio/About' component={About}/>
                 <Route  path='/portfolio/Create' component={Create}/>
-                <Route  path='/portfolio/Blog' component={Blog}/>
+                {/*<Route  path='/portfolio/Blog' component={Blog}/>*/}
                 <Route  path='/portfolio/Contact' component={Contact}/>
             </div>
         </Router>

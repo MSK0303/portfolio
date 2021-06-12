@@ -7,3 +7,7 @@ export interface PRODUCT_CARD_INFO{
     height:number,
     width: number,
 }
+
+export interface MARDDOWN_PATH {
+    path: string,
+}
