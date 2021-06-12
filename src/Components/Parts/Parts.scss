@@ -1,3 +1,14 @@
+//レスポンシブ対応
+//ブレイクポイント
+$mb: 767px;
+//@mediaのフォーマット
+@mixin mobile {
+    @media screen and (max-width: $mb) {
+        @content;
+    }
+}
+
+
 /*MyIcon*/
 @keyframes animyicon {
     0%  {
@@ -22,6 +33,29 @@
         opacity: 1;
     }
 }
+@keyframes animyicon_mobile {
+    0%  {
+        transform: scale(1.0, 1.0) translate(0, -60px);
+    }
+    15% {
+        transform: scale(0.98, 0.9) translate(0, -55px);
+    }
+    30% {
+        transform: scale(1.02, 1.0) translate(0, -52px);
+    }
+    50% {
+        transform: scale(0.98, 1.05) translate(0, -68px);
+    }
+    70% {
+        transform: scale(1.0, 0.9) translate(0, -55px);
+    }
+    100% {
+        transform: scale(1.0, 1.0) translate(0, -60px);
+    }
+    0%, 100% {
+        opacity: 1;
+    }
+}
 
 
 .my-icon {
@@ -34,5 +68,10 @@
         width: 200px;
         height: 200px;
         animation: animyicon 1s ease-in-out 1 forwards  ;
+        @include mobile {
+            width: 100px;
+            height: 100px;
+            animation: animyicon_mobile 1s ease-in-out 1 forwards  ;
+        }
     }
 }
