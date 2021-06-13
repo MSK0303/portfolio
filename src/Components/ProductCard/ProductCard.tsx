@@ -5,6 +5,7 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import {Button,CardActionArea,CardActions} from '@material-ui/core';
+import './ProductCard.scss';
 
 import {PRODUCT_CARD_INFO} from '../common';
 
@@ -19,7 +20,7 @@ const ProductCard = (props:PRODUCT_CARD_INFO) => {
     const img_height = props.height*0.6;
 
     return (
-        <div>
+        <div className="product-card-top">
             <Card style={style}>
                 <CardActionArea href={props.github_url}>
                     <CardMedia image={props.img_path} title={props.title} style={{width:props.width,height:img_height}}/>
