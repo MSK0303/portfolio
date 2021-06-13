@@ -1,3 +1,14 @@
+//レスポンシブ対応
+//ブレイクポイント
+$mb: 959px;
+//@mediaのフォーマット
+@mixin mobile {
+    @media screen and (max-width: $mb) {
+        @content;
+    }
+}
+
+
 .nav-bar {
     text-align: right;
 
@@ -5,5 +16,10 @@
         font-size: 30px;
         text-decoration: none;
         margin-right: 80px;
+        //mobileに適応させてたいcssを書く
+        @include mobile {
+            font-size: 15px;
+            margin-right: 30px;
+        }
     }
 }

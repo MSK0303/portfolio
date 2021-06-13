@@ -1,8 +1,22 @@
+//レスポンシブ対応
+//ブレイクポイント
+$mb: 959px;
+//@mediaのフォーマット
+@mixin mobile {
+    @media screen and (max-width: $mb) {
+        @content;
+    }
+}
+
 .contact-page {
     width: 100%;
     height: 90vh;
     background-color: #404040;
     margin-top: -10px;
+
+    @include mobile {
+        height: 92vh;
+    }
 
     & .contact-top {
         text-align: center;
@@ -43,8 +57,12 @@
     }
     & .contact-submit {
         margin-top: 20px;
-        width: 150px;
+        background-color: green;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        width: 100%;
         height: 40px;
-        border-radius: 50%;
+        border-radius: 20px;
     }
 }
