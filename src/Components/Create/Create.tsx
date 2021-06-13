@@ -32,15 +32,6 @@ const Create:React.FC = () => {
                     height={300} 
                     width={320} />
                 </Grid>
-                <Grid item container xs={12} md={4} sm={6} spacing={1} className="create-grid-item" justify="center">
-                    <ProductCard 
-                    title={"simple-pdf-viewer"} 
-                    message={"Electronで作成。シンプルなPDFビュワー。自分が欲しい機能があれば更新しています。"} 
-                    img_path={SIMPLE_PDF_VIEWER_IMG} 
-                    github_url="https://github.com/MSK0303/simple-pdf-viewer" 
-                    height={300} 
-                    width={320} />
-                </Grid>
             </Grid>
             <Footer />
         </div>
