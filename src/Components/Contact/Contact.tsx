@@ -32,6 +32,10 @@ const Contact:React.FC = () => {
 
             send(service_id,template_id,template_param).then(() => {
                 setIsSend(true);
+                setName("");
+                setMail("");
+                setMessage("");
+                setTitle("");
                 console.log("success to send email");
             })
         }
