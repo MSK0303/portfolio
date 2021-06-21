@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import Footer from '../Footer/Footer';
-import {Grid,TextField} from '@material-ui/core';
+import {Grid,TextField,Button} from '@material-ui/core';
 import './Contact.scss';
 import {init,sendForm,send} from 'emailjs-com';
 require('dotenv').config();
@@ -10,6 +10,7 @@ const Contact:React.FC = () => {
     const [mail,setMail] = useState("");
     const [title,setTitle] = useState("");
     const [message,setMessage] = useState("");
+    const [is_send, setIsSend] = useState(false);
 
     const sendEmail = () => {
         console.log("env.user_id , "+process.env.REACT_APP_PORTFOLIO_EMAILJS_USER_ID);
@@ -19,6 +20,7 @@ const Contact:React.FC = () => {
         const template_id = process.env.REACT_APP_PORTFOLIO_EMAILJS_TEMPLATE_ID;
         if((user_name != undefined) && (service_id != undefined) && (template_id != undefined))
         {
+
             init(user_name);
 
             const template_param = {
@@ -55,7 +57,12 @@ const Contact:React.FC = () => {
         sendEmail();
     }
 
-    return (
+    const onClickBackBtn = () => {
+        console.log("push back btn");
+        setIsSend(!is_send);
+    }
+
+    return (!is_send) ? (
         <div className="contact-page">
             <p className="contact-top">Contact</p>
             <Grid container alignItems="center" justify="center">
@@ -67,6 +74,23 @@ const Contact:React.FC = () => {
                         <TextField className="contact-message" type="text" required label="お問い合わせ内容(必須)" fullWidth margin="normal" onChange={onChangeMessage} value={message} InputProps={{disableUnderline: true}}/>
                         <input className="contact-submit" type="submit"/>
                     </form>
+                </Grid>
+            </Grid>
+            <Footer />
+        </div>
+    ) : (
+        <div className="thanks-page">
+            <p className="thanks-top">Contact</p>
+            <Grid container alignItems="center" justify="center">
+                <Grid  item md={8} xs={10} className="thanks-contents">
+                    <h2>お問い合わせありがとうございます</h2>
+                    <p>ご記入頂いた情報は無事に送信されました。</p>
+                    <p>確認のため、自動返信メールをお送りしております。</p>
+                </Grid>
+            </Grid>
+            <Grid container alignItems="center" justify="center">
+                <Grid item md={8} xs={10} >
+                <Button className="thanks-btn" onClick={onClickBackBtn}>戻る</Button>
                 </Grid>
             </Grid>
             <Footer />
