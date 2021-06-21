@@ -17,7 +17,7 @@ const Create:React.FC = () => {
                 <Grid item container xs={12} md={4}  sm={6} spacing={1} className="create-grid-item" justify="center">
                     <ProductCard 
                     title={"ポートフォリオサイト"} 
-                    message={"Reactで作成。制作物の紹介や制作活動についてのブログを書いています。少しづつ更新中。"} 
+                    message={"Reactで作成。制作物や僕自身について紹介しています。少しづつ更新中。"} 
                     img_path={PORTFOLIO_SITE_IMG} 
                     github_url="https://github.com/MSK0303/portfolio" 
                     height={300} 
@@ -32,15 +32,24 @@ const Create:React.FC = () => {
                     height={300} 
                     width={320} />
                 </Grid>
-                <Grid item container xs={12} md={4} sm={6} spacing={1} className="create-grid-item" justify="center">
+                {/* <Grid item container xs={12} md={4} sm={6} spacing={1} className="create-grid-item" justify="center">
                     <ProductCard 
-                    title={"simple-pdf-viewer"} 
-                    message={"Electronで作成。シンプルなPDFビュワー。自分が欲しい機能があれば更新しています。"} 
-                    img_path={SIMPLE_PDF_VIEWER_IMG} 
-                    github_url="https://github.com/MSK0303/simple-pdf-viewer" 
+                    title={"Webサイト1"} 
+                    message={"HTML・CSS(SASS)・Javascriptで作成。デザインはクリスタ(https://crestadesign.org/)から使わせてもらいました。"} 
+                    img_path={PORTFOLIO_SITE_IMG} 
+                    github_url="#" 
                     height={300} 
                     width={320} />
                 </Grid>
+                <Grid item container xs={12} md={4} sm={6} spacing={1} className="create-grid-item" justify="center">
+                    <ProductCard 
+                    title={"Webサイト2"} 
+                    message={"HTML・CSS(SASS)・Javascriptで作成。こちらもクリスタ(https://crestadesign.org/)から使わせてもらいました。"} 
+                    img_path={PORTFOLIO_SITE_IMG} 
+                    github_url="#" 
+                    height={300} 
+                    width={320} />
+                </Grid> */}
             </Grid>
             <Footer />
         </div>
