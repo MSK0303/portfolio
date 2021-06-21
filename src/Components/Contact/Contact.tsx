@@ -2,12 +2,38 @@ import React,{useState} from 'react';
 import Footer from '../Footer/Footer';
 import {Grid,TextField} from '@material-ui/core';
 import './Contact.scss';
+import {init,sendForm,send} from 'emailjs-com';
+require('dotenv').config();
 
 const Contact:React.FC = () => {
     const [name,setName] = useState("");
     const [mail,setMail] = useState("");
     const [title,setTitle] = useState("");
     const [message,setMessage] = useState("");
+
+    const sendEmail = () => {
+        console.log("env.user_id , "+process.env.REACT_APP_PORTFOLIO_EMAILJS_USER_ID);
+        
+        const user_name = process.env.REACT_APP_PORTFOLIO_EMAILJS_USER_ID;
+        const service_id = process.env.REACT_APP_PORTFOLIO_EMAILJS_SERVICE_ID;
+        const template_id = process.env.REACT_APP_PORTFOLIO_EMAILJS_TEMPLATE_ID;
+        if((user_name != undefined) && (service_id != undefined) && (template_id != undefined))
+        {
+            init(user_name);
+
+            const template_param = {
+                to_name: name,
+                title: title,
+                email: mail,
+                message: message
+            };
+
+            send(service_id,template_id,template_param).then(() => {
+                console.log("success to send email");
+            })
+        }
+        
+    }
 
 
     const onChangeName = (e:React.ChangeEvent<HTMLInputElement>) => {
@@ -26,6 +52,7 @@ const Contact:React.FC = () => {
     const onSubmit = (e:React.ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log("push submit");
+        sendEmail();
     }
 
     return (
