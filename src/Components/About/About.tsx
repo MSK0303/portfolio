@@ -12,7 +12,7 @@ const About = () => {
         '性別  : 男性',
         '年齢  : 30代',
         '資格  : 博士(数理学) , 中学・高校教員免許(数学) , 簿記3級',
-        '        Python3 認定基礎試験',
+        '        Python3 認定基礎試験 , 統計検定3級',
         'スキル: C/C++ , C# , Java , Python , HTML , CSS , JavaScript , React',
     ];
 
