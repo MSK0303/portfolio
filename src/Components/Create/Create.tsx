@@ -5,6 +5,7 @@ import ProductCard from '../ProductCard/ProductCard';
 import PORTFOLIO_SITE_IMG from '../../assets/images/portfolio_site.png';
 import SIMPLE_PDF_VIEWER_IMG from '../../assets/images/simple_pdf_viewer.png';
 import SAMPLE_WEBPAGE1_IMG from '../../assets/images/sample-webpage1.png';
+import SAMPLE_WEDDING_OP1_IMG from '../../assets/images/wedding-op1.png';
 
 import './Create.scss';
 
@@ -40,6 +41,15 @@ const Create:React.FC = () => {
                     message={"HTML・CSS(SASS)・Javascriptで作成。デザインはクリスタ(https://crestadesign.org/)から使わせてもらいました。"} 
                     img_path={SAMPLE_WEBPAGE1_IMG} 
                     github_url="https://mcgex.net/webpage-sample1/public/index.html" 
+                    height={300} 
+                    width={320} />
+                </Grid>
+                <Grid item container xs={12} md={4} sm={6} spacing={1} className="create-grid-item" justify="center">
+                    <ProductCard 
+                    title={"結婚式オープニング動画"} 
+                    message={"Premiere ProとAfter Effectsで作成。素材はぱくたそとDOVA-SYNDROMから使わせてもらいました。"} 
+                    img_path={SAMPLE_WEDDING_OP1_IMG} 
+                    github_url="https://youtu.be/vX-fehBM1b4" 
                     height={300} 
                     width={320} />
                 </Grid>
