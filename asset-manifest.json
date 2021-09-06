@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.5cce518b.chunk.css",
-    "main.js": "/portfolio/static/js/main.2e1429af.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.2e1429af.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.eeb4effd.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.eeb4effd.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.6e90ce8e.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.6e90ce8e.js.map",
     "static/js/2.6f16dd7b.chunk.js": "/portfolio/static/js/2.6f16dd7b.chunk.js",
@@ -15,12 +15,13 @@
     "static/media/portfolio_site.1eac9fb8.png": "/portfolio/static/media/portfolio_site.1eac9fb8.png",
     "static/media/sample-webpage1.7a515542.png": "/portfolio/static/media/sample-webpage1.7a515542.png",
     "static/media/simple_pdf_viewer.84b2cff8.png": "/portfolio/static/media/simple_pdf_viewer.84b2cff8.png",
-    "static/media/Home.scss": "/portfolio/static/media/top-img.1c2219da.jpg"
+    "static/media/Home.scss": "/portfolio/static/media/top-img.1c2219da.jpg",
+    "static/media/wedding-op1.a1c2d9fb.png": "/portfolio/static/media/wedding-op1.a1c2d9fb.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6e90ce8e.js",
     "static/js/2.6f16dd7b.chunk.js",
     "static/css/main.5cce518b.chunk.css",
-    "static/js/main.2e1429af.chunk.js"
+    "static/js/main.eeb4effd.chunk.js"
   ]
 }
