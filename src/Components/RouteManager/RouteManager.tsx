@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Route} from 'react-router-dom';
 import Home  from '../Home/Home';
 import About from '../About/About';
 import Create from '../Create/Create';
+import Works from '../Works/Works';
 import Contact from '../Contact/Contact';
 import Blog from '../Blog/Blog';
 import NavBar from '../Navbar/Navbar';
@@ -15,6 +16,7 @@ const RouteManager:React.FC = () => {
                 <Route  exact path='/portfolio/' component={Home} />
                 <Route  path='/portfolio/About' component={About}/>
                 <Route  path='/portfolio/Create' component={Create}/>
+                <Route  path='/portfolio/Works' component={Works}/>
                 {/*<Route  path='/portfolio/Blog' component={Blog}/>*/}
                 <Route  path='/portfolio/Contact' component={Contact}/>
             </div>

@@ -6,7 +6,7 @@ import "./Home.scss";
 import {useTransition,animated,config} from 'react-spring';
 
 const Top:React.FC = () => {
-    const message_table = ["Engineer","Blogger","Soccer Coach"];
+    const message_table = ["Engineer","Blogger","Video Creator","Soccer Coach"];
     const [index, setIndex] = useState(0);
 
     const transitions = useTransition(index,{
